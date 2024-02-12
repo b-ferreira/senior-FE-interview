@@ -24,8 +24,8 @@ yarn start
 
 Using the provided data and the basic react.js application that has been created for you, cover the following user stories:
 
-- As a supplier user I should be able to see my catalog in a table format
-  - Fetch list of products from the following endpoint: http://localhost:4441/products using library of your choice.
+- As a supplier user, I should be able to see my catalog in a table format.
+  - The list of of products can be fetched from the following endpoint: http://localhost:4441/products.
 - As a supplier user I should be able to see the table rows with the category with the highest number of occurrences highlighted in yellow
   - Implement logic on a client-side
   - If there are multiple categories with the same number of occurrences, highlight all of them
@@ -43,3 +43,19 @@ Using the provided data and the basic react.js application that has been created
 - Add retry policy for the backend requests (in case of network failure)
   - Failed request should be retried 3 times with 1-second delay between retries
 - Add debounce to the search requests
+
+## Trouble shooting
+
+If you are installing via npm and are using an M2 mac you might get this error:
+
+```bash
+(⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂) ⠙ idealTree:project: sill idealTree buildDeps
+```
+
+to fix it follow: https://www.reddit.com/r/node/comments/z9hsdw/npm_install_stuck_on_idealtree_builddeps/
+
+essentially do:
+
+```
+System Preferences >> Network >> press Advanced >> TCP/IP tab >> on Configure IPv6 select Link-local
+```
